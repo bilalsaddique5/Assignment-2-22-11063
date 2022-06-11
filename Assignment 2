@@ -1,0 +1,20 @@
+from selenium import webdriver
+import time
+
+web = webdriver.Chrome()
+web.get('https://docs.google.com/forms/d/e/1FAIpQLSep4e5hjmU12nlDZvW2bZJQVlWr9oHIzn6TQLuc0kDr10lH8A/viewform')
+
+time.sleep(2)
+
+FullName = "Bilal Saddique"
+Full = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input')
+Full.send_keys(FullName)
+
+EmailId = "Bilalsaddique1997@gmail.com"
+email = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input')
+email.send_keys(EmailId)
+
+Address = "XYZ lorem"
+address = web.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div[2]/textarea')
+address.send_keys(Address)
+
